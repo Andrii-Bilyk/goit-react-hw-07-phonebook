@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/selectors';
-import { addContact } from 'redux/contactsSlice';
+import { addContact } from 'redux/operations';
 import styles from './contact-form.module.css';
 
 const ContactForm = () => {
@@ -41,23 +41,31 @@ const ContactForm = () => {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      <span>Name</span>
-      <input
-        type="text"
-        name="name"
-        required
-        value={name}
-        onChange={handleChange}
-      />
-      <span>Number tel:</span>
-      <input
-        type="tel"
-        name="number"
-        required
-        value={number}
-        onChange={handleChange}
-      />
-      <button className={styles.btn} type="submit">Add contact</button>
+      <label className={styles.label}>
+        <span>Name</span>
+        <input
+          type="text"
+          name="name"
+          value={name}
+          onChange={handleChange}
+          required
+          placeholder="Enter a contact name"
+        />
+      </label>
+      <label className={styles.label}>
+        <span>Number</span>
+        <input
+          type="tel"
+          name="number"
+          value={number}
+          onChange={handleChange}
+          required
+          placeholder="Enter a contact number"
+        />
+      </label>
+      <button type="submit" className={styles.btn}>
+        Add Contact
+      </button>
     </form>
   );
 }

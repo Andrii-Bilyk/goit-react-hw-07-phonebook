@@ -1,6 +1,22 @@
-.container {
+.wrapper {
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  background-image: linear-gradient(
+      rgba(154, 85, 41, 0.6),
+      rgba(94, 39, 4, 0.6)
+    ),
+    url(../Image/backgroun.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+  background: rgba(44, 170, 143, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }

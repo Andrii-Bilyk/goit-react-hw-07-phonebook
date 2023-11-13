@@ -18,7 +18,7 @@ function Filter() {
       type="text"
       value={filter}
       onChange={handleChange}
-      placeholder="Пошук за ім'ям"
+      placeholder="Find contacts by name"
     />
   );
 }

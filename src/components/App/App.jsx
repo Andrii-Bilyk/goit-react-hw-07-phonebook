@@ -6,13 +6,16 @@ import styles from './app.module.css';
 
 function App() {
   return (
+    <div className={styles.wrapper}>
         <div className={styles.container}>
-          <h1>Телефонна книга</h1>
+          {/* <img src="../Image/backgroun.jpg" alt="sad" /> */}
+          <h1>Phonebook</h1>
           <ContactForm />
-          <h2>Контакти</h2>
+          <h2>Contacts</h2>
           <Filter />
           <ContactList />
         </div>
+    </div>
   );
 }
 

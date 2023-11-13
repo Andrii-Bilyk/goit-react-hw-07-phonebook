@@ -15,8 +15,10 @@
     text-align: center;
   
     margin-left: 15px;
+    transition: transform 250ms ease-out, background-color 250ms ease-out;
   }
   
   .button:hover {
     background-color: #2073b4;
+    transform: scale(1.1);
   }
